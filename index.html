@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,7 +18,8 @@
     <section class="card">
       <h2>Pergunta 1</h2>
       <p><strong>Qual é o tema principal do filme A Rede Social?</strong></p>
-      <p class="resposta">
+      <button class="btn-toggle">Ver resposta</button>
+      <p class="resposta oculto">
         O tema central do filme é a criação do Facebook e os conflitos que surgiram a partir disso, 
         principalmente ligados à ambição, amizade, poder e disputas legais. 
         A obra mostra como a genialidade tecnológica pode abrir portas para o sucesso, mas também gerar rivalidades, traições e dilemas éticos.
@@ -29,7 +29,8 @@
     <section class="card">
       <h2>Pergunta 2</h2>
       <p><strong>Qual é o impacto do sucesso do Facebook na vida de Mark Zuckerberg?</strong></p>
-      <p class="resposta">
+      <button class="btn-toggle">Ver resposta</button>
+      <p class="resposta oculto">
         O sucesso do Facebook transformou Mark Zuckerberg em um dos jovens mais ricos e influentes do mundo, 
         mas trouxe também solidão e perdas pessoais. 
         O filme mostra que, apesar da conquista financeira e do reconhecimento, ele acabou perdendo amizades importantes, 
@@ -41,7 +42,8 @@
     <section class="card">
       <h2>Pergunta 3</h2>
       <p><strong>Descreva como o filme A Rede Social mostra a relação entre a tecnologia e a sociedade e quais são os principais pontos positivos e negativos dessa relação.</strong></p>
-      <p class="resposta">
+      <button class="btn-toggle">Ver resposta</button>
+      <p class="resposta oculto">
         O filme retrata como a tecnologia pode transformar a sociedade, criando novas formas de comunicação, 
         aproximando pessoas e revolucionando a forma como nos relacionamos. 
         Entre os pontos positivos estão a inovação, a conectividade global e as oportunidades de negócios.  
@@ -53,7 +55,8 @@
     <section class="card">
       <h2>Pergunta 4</h2>
       <p><strong>Qual é a mensagem que o filme A Rede Social transmite sobre a importância da ética e da responsabilidade no mundo dos negócios e das tecnologias? E o que você acha dessas mensagens?</strong></p>
-      <p class="resposta">
+      <button class="btn-toggle">Ver resposta</button>
+      <p class="resposta oculto">
         A mensagem principal é que o sucesso não deve ser construído apenas com base na ambição, 
         mas também na ética e na responsabilidade. O filme alerta para os riscos de negligenciar valores morais em nome do lucro.  
         Eu acredito que essa mensagem é extremamente atual e necessária, já que a tecnologia continua avançando rapidamente 
@@ -66,5 +69,23 @@
   <footer>
     <p>Desenvolvido por <strong>Willian</strong> | 💻 Estudos de Cinema e Tecnologia</p>
   </footer>
+
+  <!-- Script para abrir/fechar respostas -->
+  <script>
+    const botoes = document.querySelectorAll(".btn-toggle");
+
+    botoes.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const resposta = btn.nextElementSibling;
+        resposta.classList.toggle("oculto");
+
+        if (resposta.classList.contains("oculto")) {
+          btn.textContent = "Ver resposta";
+        } else {
+          btn.textContent = "Ocultar resposta";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
