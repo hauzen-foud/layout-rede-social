@@ -74,6 +74,30 @@ main {
   line-height: 1.5;
   color: #e0e0e0;
   border-left: 4px solid #ffd700;
+  margin-top: 1rem;
+}
+
+/* Esconder resposta inicialmente */
+.oculto {
+  display: none;
+}
+
+/* Botão */
+.btn-toggle {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #1a73e8;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-toggle:hover {
+  background: #1558b0;
+  transform: scale(1.05);
 }
 
 /* Rodapé */
